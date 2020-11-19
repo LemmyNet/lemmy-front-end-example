@@ -1,5 +1,5 @@
 import { render, Component } from 'inferno'
-import { LemmyHttp, SiteResponse } from 'lemmy-js-client';
+import { LemmyHttp, GetSiteResponse } from 'lemmy-js-client';
 
 const httpUrl = `http://${window.location.hostname}:8536/api/v1`;
 
@@ -8,7 +8,7 @@ const container = document.getElementById('app')
 interface MyProps {}
 
 interface MyState {
-  site: SiteResponse,
+  site: GetSiteResponse,
 }
 
 class MyComponent extends Component<MyProps, MyState> {
